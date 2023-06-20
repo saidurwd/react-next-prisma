@@ -72,6 +72,11 @@ function showPosition(position) {
 //7
 
 //8
+function addParaData() {
+    var element = document.getElementById("pid8");
+    element.innerHTML = "Paragraph content changed!";
+    element.style.color = "red";
+ }
 
 //9
 
@@ -80,6 +85,7 @@ function addCSSClass() {
     var element = document.getElementById("pid1");
     element.classList.add("highlight");
     element.style.backgroundColor = "yellow";
+    element.style.color = "red";
  }
 
 //11
@@ -104,5 +110,26 @@ function getQuerySelector() {
 }
 
 //14
+async function getList() {
+    let URL="https://api.example.com/data"
+    let res=await axios.get(URL);
+}
 
 //15
+async function postData(){
+    let name="John Doe";
+    let email="johndoe@example.com";
+    let URL = `https://api.example.com/submit`
+    let res = await axios.post(URL,
+            {
+              name:name,
+              email:email
+            }
+    );
+    if(res.status===200){
+        alert("success")
+    }
+    else {
+      alert("error")
+    }
+  }

@@ -158,10 +158,10 @@
     over an image, change the image source to another image of your choice.
 
     <h3>8.HTML DOM Document:</h3>
-
-    a. Create a webpage with a button and a paragraph element. b. Implement a
-    JavaScript function that changes the text content of the paragraph element
-    to "Button Clicked!" when the button is clicked.
+    <p>a. Create a webpage with a button and a paragraph element.</p>
+    <button type="button8" onclick="addParaData()">Button Clicked!</button> 
+    <p id="pid8">I am a paragraph</p>
+     <p>b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked.</p>
 
     <h3>9.JS DOM Working with Form Input:</h3>
 
@@ -205,16 +205,32 @@
       <script>getQuerySelector();</script>
 
       <h3>14.AJAX Get Request:</h3>
-
-      a. Implement a JavaScript function that sends an AJAX GET request to the
-      following URL: "https://api.example.com/data".
+      <p>a. Implement a JavaScript function that sends an AJAX GET request to the following URL: "https://api.example.com/data".</p>
+      <code>async function getList() {
+        let URL="https://api.example.com/data"
+        let res=await axios.get(URL);
+    }</code>
 
       <h3>15.AJAX Post Request:</h3>
-
-      a. Implement a JavaScript function that sends an AJAX POST request to the
-      following URL: "https://api.example.com/submit". b. Send a JSON payload
-      with the following data: { "name": "John Doe", "email":
-      "johndoe@example.com" }.
+      <p>a. Implement a JavaScript function that sends an AJAX POST request to the following URL: "https://api.example.com/submit".</p>
+       <p>b. Send a JSON payload with the following data: { "name": "John Doe", "email": "johndoe@example.com" }.</p>
+      <code>async function postData(){
+        let name="John Doe";
+        let email="johndoe@example.com";
+        let URL = `https://api.example.com/submit`
+        let res = await axios.post(URL,
+                {
+                  name:name,
+                  email:email
+                }
+        );
+        if(res.status===200){
+            alert("success")
+        }
+        else {
+          alert("error")
+        }
+      }</code>
     </li>
   </body>
 </html>
