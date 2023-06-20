@@ -175,35 +175,34 @@
     Password field. j. Display appropriate error messages for invalid fields.
 
     <h3>10.DOM Manipulate CSS Class:</h3>
-
-    a. Create a webpage with a button and a paragraph element. b. Implement a
-    JavaScript function that adds a CSS class named "highlight" to the paragraph
-    element when the button is clicked. The "highlight" class should change the
-    background color of the paragraph to yellow.
+    <p>a. Create a webpage with a button and a paragraph element. </p>
+    <button type="button" onclick="addCSSClass()">Click Me!</button> 
+    <p id="pid1">I am a paragraph</p>
+    <p>b. Implement a JavaScript function that adds a CSS class named "highlight" to the paragraph element when the button is clicked. The "highlight" class should change the background color of the paragraph to yellow.</p>
 
     <h3>11.Create Element & Append Element:</h3>
+    <p>a. Create a webpage with an empty unordered list (ul).</p>
+    <code>
+        <ul id="list"></ul>
+    </code>
 
-    <p>
-      a. Create a webpage with an empty unordered list (<code><ul></ul></code>).
-    </p>
-
-    b. Implement a JavaScript function that dynamically creates five list items
-    (
-    <li>
-      ) with sequential numbers (1 to 5) and appends them to the unordered list.
-
+    <p>b. Implement a JavaScript function that dynamically creates five list items (li) with sequential numbers (1 to 5) and appends them to the unordered list.</p>
+    <script>addelement();</script>
       <h3>12.DOM Change Attribute Value:</h3>
-
-      a. Create a webpage with an image element (<img />) that has an initial
-      source URL. b. Implement a JavaScript function that changes the source URL
-      of the image element when a button is clicked. Use a different image URL
-      of your choice.
-
+      <p>a. Create a webpage with an image element (<img />) that has an initial  source URL. </p>
+      <img id="myImg" src="img/img_girl.jpg" alt="Girl in a jacket" width="50" height="50">
+      <p>b. Implement a JavaScript function that changes the source URL of the image element when a button is clicked. Use a different image URL of your choice.</p>
+      <button onclick="getImageChange()">Change Image</button>
       <h3>13.DOM Query Selector:</h3>
 
-      a. Create a webpage with multiple paragraphs containing different classes
-      and IDs. b. Implement a JavaScript function that selects all paragraphs
-      with a specific class and changes their text color to red.
+      a. Create a webpage with multiple paragraphs containing different classes and IDs. 
+      <p class="para1 textColor" id="p1">I am  P1</p>
+      <p class="para2 textColor" id="p2">I am  P2</p>
+      <p class="para3 textColor" id="p3">I am  P3</p>
+      <p class="para4 textColor" id="p4">I am  P4</p>
+      <p class="para5 textColor" id="p5">I am  P5</p>
+      b. Implement a JavaScript function that selects all paragraphs with a specific class and changes their text color to red.
+      <script>getQuerySelector();</script>
 
       <h3>14.AJAX Get Request:</h3>
 

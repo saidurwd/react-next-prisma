@@ -54,17 +54,55 @@ function getNavigator() {
 }
 //6
 function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
   }
-  
-  function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+}
+
+function showPosition(position) {
+  x.innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude;
+}
+
+//7
+
+//8
+
+//9
+
+//10
+function addCSSClass() {
+    var element = document.getElementById("pid1");
+    element.classList.add("highlight");
+    element.style.backgroundColor = "yellow";
+ }
+
+//11
+function addelement() {
+  let counter = 5;
+  var completelist = document.getElementById("list");
+  for (let i = 1; i <= counter; i++) {
+    completelist.innerHTML += "<li>Item " + i + "</li>";
   }
+}
 
-  //7
+//12
+function getImageChange() {
+  document.getElementById("myImg").src = "img/imgalt.png";
+}
+//13
+function getQuerySelector() {
+  const nodeList = document.querySelectorAll(".textColor");
+  for (let i = 0; i < nodeList.length; i++) {
+    nodeList[i].style.backgroundColor = "red";
+  }
+}
 
+//14
+
+//15
