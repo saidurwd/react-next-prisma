@@ -151,11 +151,10 @@
     var x = document.getElementById("getLocation");
     </script>
     <h3>7.JS Common Events:</h3>
-    Implement a webpage with the following functionality: a. When the user
-    clicks anywhere on the page, display an alert with the coordinates (x, y) of
-    the click. b. When the user presses any key on the keyboard, display an
-    alert with the key code of the pressed key. c. When the user moves the mouse
-    over an image, change the image source to another image of your choice.
+    <p>Implement a webpage with the following functionality: a. When the user clicks anywhere on the page, display an alert with the coordinates (x, y) of the click. b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key. c. When the user moves the mouse over an image, change the image source to another image of your choice.</p>
+    <code>onclick="showCoords(event)" in body tag</code><br>
+    <code>onkeypress="return myKeyPress(event)" in body tag</code><br>
+    <img id="myImg2" src="img/img_girl.jpg" alt="Girl in a jacket" width="50" height="50" onmousemove="getImageChange2()">
 
     <h3>8.HTML DOM Document:</h3>
     <p>a. Create a webpage with a button and a paragraph element.</p>
@@ -164,15 +163,20 @@
      <p>b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked.</p>
 
     <h3>9.JS DOM Working with Form Input:</h3>
+    <p>Implement a webpage with a form that has the following fields: a. Name (text input) b. Email (email input) c. Password (password input) d. Confirm Password password input) e. Submit (button)</p>
+    <p>Implement JavaScript validation for the form fields: f. Name should not be empty and should contain only letters. g. Email should be a valid email address. h. Password should have a  minimum length of 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit. i. Confirm Password should match the Password field. j. Display appropriate error messages for invalid fields.</p>
+    <form action="#" method="post" onsubmit="validateInput()">
+      <label>Name: </label>
+      <input type="text" id="name" required><br>
+      <label>Email: </label>
+      <input type="email" id="email" required><br>
+      <label>Password: </label>
+      <input type="password" id="password" required maxlength="8"><br>
+      <label>Confirm Password: </label>
+      <input type="password" id="confirm" required maxlength="8"><br>
+      <button type="submit">Submit</button>
+    </form>
 
-    Implement a webpage with a form that has the following fields: a. Name (text
-    input) b. Email (email input) c. Password (password input) d. Confirm
-    Password (password input) e. Submit (button) Implement JavaScript validation
-    for the form fields: f. Name should not be empty and should contain only
-    letters. g. Email should be a valid email address. h. Password should have a
-    minimum length of 8 characters and contain at least one uppercase letter,
-    one lowercase letter, and one digit. i. Confirm Password should match the
-    Password field. j. Display appropriate error messages for invalid fields.
 
     <h3>10.DOM Manipulate CSS Class:</h3>
     <p>a. Create a webpage with a button and a paragraph element. </p>

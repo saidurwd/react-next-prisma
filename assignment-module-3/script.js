@@ -70,6 +70,21 @@ function showPosition(position) {
 }
 
 //7
+function myKeyPress(e){
+  let value= event.which;
+  alert(value);
+}
+function getImageChange2() {
+  document.getElementById("myImg2").src = "img/imgalt.png";
+}
+
+function showCoords(event) {
+  let x = event.clientX;
+  let y = event.clientY;
+  let text = "X coords: " + x + ", Y coords: " + y;
+  alert(text);
+}
+
 
 //8
 function addParaData() {
@@ -79,6 +94,29 @@ function addParaData() {
  }
 
 //9
+function validateInput()
+{
+ var nameValue = document.getElementById("name").value;
+ var pw1 = document.getElementById("password").value;  
+ var pw2 = document.getElementById("confirm").value;  
+ var regexPattern = /^[a-z][a-z\s]*$/;
+ alert(pw1);
+ if(nameValue.match(regexPattern)){
+  return true;
+ } else {
+  document.getElementById("name").focus();
+  alert("Enter letters and spaces only");
+  return false;
+ }
+
+  if(pw1 != pw2)  
+  {   
+    alert("Passwords did not match");  
+    return false;
+  } else {  
+    return true;
+  }  
+}
 
 //10
 function addCSSClass() {
