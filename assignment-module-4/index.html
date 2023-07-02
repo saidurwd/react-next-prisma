@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Cart</title>
+    <link rel="stylesheet" href="css/milligram.css" />
+  </head>
+  <body>
+    <div id="loader" class="loading d-none"></div>
+    <div class="container">
+      <div class="row" id="itemLists"></div>
+    </div>
+
+    <script src="js/axios.min.js"></script>
+    <script>
+      async function getList() {
+        document.getElementById("loader").classList.remove("d-none");
+        let URL = "http://localhost:8888/webapi/web/product/products";
+        let res = await axios.get(URL);
+        let i = 1;
+        document.getElementById("loader").classList.add("d-none");
+        if (res.status === 200) {
+          let list = res.data["data"];
+          list.forEach((item) => {
+            document.getElementById(
+              "itemLists"
+            ).innerHTML += `<div class="column">
+                                    <img src="http://localhost:8888/webapi/uploads/products/${item["image"]}"><br>
+                                     ${item["product"]}<br>
+                                      ${item["sku"]}<br>
+                                       ${item["price"]}
+                            </div>`;
+            i = i + 1;
+          });
+        } else {
+          alert("Wrong");
+        }
+      }
+      getList();
+    </script>
+  </body>
+</html>
