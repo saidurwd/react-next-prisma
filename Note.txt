@@ -1,0 +1,2 @@
+Assignment 4 live URL: http://saidur-rahman.com/shopping-cart/
+Git URL: https://github.com/saidurwd/react-next-prisma/tree/main/shopping-cart
